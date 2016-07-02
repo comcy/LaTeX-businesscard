@@ -6,3 +6,8 @@
 \usepackage[zw32010, crossmark]{ticket}
 
 
+\renewcommand{\ticketdefault}{% \put( 45, 5){\includegraphics[width=38mm,origin=bl]{tux-logo}} \put( 5, 15){\color{uni}\line(1,0){36}} \put( 7, 11){\small Tux\TeX\ International} \put( 7, 7){\small Beispielgasse 123} \put( 7, 3){\small 99999 Königs-Musterhausen} \put( 7, 24){\small Tel:} \put( 7, 20){\small Fax:} }
+
+\newcommand{\vcard}[5]{\ticket{% \put(6,40){\LARGE\bfseries #1} \put(7,34){#2} \put(14,24){\small #3}Gestatten, LATEX HACK #65 \put(14,20){\small #4} \put( 7,16){\small #5} }}
+
+\begin{document} \sffamily \newcounter{numcards} \whiledo{\value{numcards}<10}{% \stepcounter{numcards}% \vcard{Hugo Schulz}{Senior-Pinguinbändiger}% {+49(0)9999992}{+49(0)9999993}{hugo@example.com}} \end{document}
